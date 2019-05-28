@@ -1,0 +1,280 @@
+section {
+  transition: .5s all;
+  opacity: 0;
+
+  &#home {
+    width: 830px;
+    height: 400px;
+    margin-left: 260px;
+    margin-top: 341px;
+    border: 0px solid black;
+
+    @include breakpoint(max-width $iPad-landscape) {
+      width: 80%;
+      margin-left: 104px;
+    }
+    @include breakpoint(max-width $iPhone-landscape) {
+      width: 70%;
+      margin-top: 200px;
+      margin-left: 50px;
+    }
+
+    p {
+      &.contact {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 44px;
+          height: 3px;
+          background: $yellow;
+          top: -20px;
+        }
+      }
+    }
+  
+  }
+
+  &#work {
+    width: 1020px;
+    height: 540px;
+    margin-left: 232px;
+    margin-top: 140px;
+    border: 0px solid black;
+
+    @include breakpoint(max-width $iPad-landscape) {
+      width: 860px;
+      margin-left: 104px;
+    }
+    @include breakpoint(max-width $iPhone-landscape) {
+      width: 280px;
+      margin-top: -100px;
+      margin-left: 50px;
+      height: 920px;
+    }
+
+    p {
+      &.title {
+        padding-left: 28px;
+      }
+      &.contact {
+        font-weight: 600;
+        font-size: 15px !important;
+        text-align: center;
+        color: $black;
+        padding-top: 20px;
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        img {
+          width: 480px;
+          height: 360px;
+          margin: 0 15px;
+          @include breakpoint(max-width $iPad-landscape) {
+            width: 400px;
+            height: auto;
+          }
+          @include breakpoint(max-width $iPhone-landscape) {
+            width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .works-pager {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 0px;
+      span {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        margin: 0 6px;
+        font-size: 1px;
+        color: $white;
+        border-bottom: 1px solid $gray;
+        &.cycle-pager-active {
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  &#about {
+    width: 1260px;
+    height: 500px;
+    margin-left: 104px;
+    margin-top: 246px;
+    border: 0px solid black;
+    position: relative;
+
+    @include breakpoint(max-width $iPad-landscape) {
+      width: 80%;
+    }
+
+    @include breakpoint(max-width $iPhone-landscape) {
+      margin-left: 50px;
+      margin-top: 200px;
+      height: 680px;
+    }
+
+    #facumontanaro {
+      background: url('../images/facumontanaro.jpg') center center no-repeat;
+      background-size: cover;
+      width: 310px;
+      height: 310px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 0;
+
+      @include breakpoint(max-width $iPad-landscape) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @include breakpoint(max-width $iPhone-landscape) {
+        width: 270px;
+        height: 270px;
+      }
+    }
+
+    p {
+      padding-left: 359px;
+      font-size: 18px;
+      line-height: 40px;
+
+      @include breakpoint(max-width $iPad-landscape) {
+        padding-left: 200px;
+        font-size: 13px;
+        line-height: 25px;
+      }
+      @include breakpoint(max-width $iPhone-landscape) {
+        padding-left: 0px;
+      }
+
+      &.contact {
+        padding-top: 64px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &#contact {
+    width: 920px;
+    height: 200px;
+    margin-left: 258px;
+    margin-top: 313px;
+    border: 0px solid black;
+
+    @include breakpoint(max-width $iPad-landscape) {
+      margin-left: 104px;
+      margin-top: 250px;
+    }
+
+    @include breakpoint(max-width $iPhone-landscape) {
+      margin-left: 50px;
+      height: 320px;
+      width: 75%;
+    }
+
+    p {
+      line-height: 32px;
+      margin-top: 14px;
+      font-weight: 600;
+
+      @include breakpoint(max-width $iPhone-landscape) {
+        padding-left: 0px;
+        margin-top: 0px;
+        line-height: 25px;
+      }
+
+      &.title {
+        padding-top: 0;
+        padding-left: 0;
+        margin-top: 0;
+        line-height: 40px;
+      }
+
+      a:hover {
+        color: $black;
+      }
+    }
+
+    a {
+      font-weight: 400;
+      color: $gray;
+      border-bottom: 1px solid $gray;
+      padding-bottom: 4px;
+    }
+  }
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+p {
+  &.highlighted {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 500;
+    padding-bottom: 86px;
+
+    @include breakpoint(max-width $iPhone-landscape) {
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &.title {
+    font-size: 30px !important;
+    line-height: 40px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 40px;
+
+    @include breakpoint(max-width $iPhone-landscape) {
+      padding-top: 300px;
+      font-size: 20px !important;
+      line-height: 30px !important;
+      padding-bottom: 20px;
+    }
+  }
+
+  &.contact {
+    color: $gray;
+    font-size: 20px !important;
+    line-height: 24px;
+    position: relative;
+
+    @include breakpoint(max-width $iPad-landscape) {
+      font-size: 15px !important;
+    }
+
+    b {
+      font-weight: 600;
+    }
+
+    a {
+      color: $gray;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

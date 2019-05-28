@@ -1,0 +1,21 @@
+body {
+  font-family: $montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: $black;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  transition: .5s all;
+
+  &:hover {
+    color: $gray;
+  }
+
+  &.active {
+    color: $gray;
+  }
+}
