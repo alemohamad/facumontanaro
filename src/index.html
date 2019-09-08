@@ -110,9 +110,9 @@
 
       <section id="home" v-bind:class="{ active: homeScreen, hidden: homeScreenLate }">
           <p class="highlighted">
-            I’m Facu Montanaro, photographer and designer
-            working on branding and visual communication with
-            a minimalist approach.
+            I’m a 29-year-old Argentinian photographer and designer living in
+            Buenos Aires. I consider myself a self-taught person who’s constantly
+            learning and always looking for new experiences.
           </p>
 
           <p class="contact">
@@ -122,35 +122,17 @@
       </section>
 
       <section id="work" v-bind:class="{ active: workScreen, hidden: workScreenLate }">
-        <p class="title">Selected work</p>
+        <p class="title" data-text="previews">Selected work,<br>more at Dribbble or Behance</p>
 
-        <ul class="gallery cycle-slideshow" 
-        data-cycle-fx=fadeIn
-        data-cycle-timeout=3000
-        data-cycle-slides="> li"
-        data-cycle-pause-on-hover="true"
-        data-cycle-pager=".works-pager"
-        data-cycle-log="false">
-          <li>
-            <a href="https://www.behance.net/gallery/79264475/RENAPER-Branding" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/12768879264475.5cbe301ab3408.png" alt="RENAPER Branding"></a>
-            <a href="https://dribbble.com/shots/5671262-Provincias-Argentinas-poster-series" target="_blank"><img src="https://cdn.dribbble.com/users/225194/screenshots/5671262/10-poster-mockup_4x.jpg" alt="Provincias Argentinas poster series."></a>
-          </li>
-          <li>
-            <a href="https://dribbble.com/shots/5619462-Coffee-types" target="_blank"><img src="https://cdn.dribbble.com/users/225194/screenshots/5619462/artboard_5_4x.png" alt="Coffee types."></a>
-            <a href="https://www.behance.net/gallery/67197893/Minimal-posters" target="_blank"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/8e349c67197893.5b315bfe7fd53.png" alt="Minimal posters."></a>
-          </li>
-          <li>
-            <a href="https://dribbble.com/shots/3936552-Libra-Scorpio" target="_blank"><img src="https://cdn.dribbble.com/users/225194/screenshots/3936552/05.jpg" alt="Libra & Scorpio"></a>
-            <a href="https://dribbble.com/shots/3924441-Cities-Buenos-Aires-London-mobile" target="_blank"><img src="https://cdn.dribbble.com/users/225194/screenshots/3924441/artboard_2_72x.png" alt="Cities - Buenos Aires & London mobile"></a>
-          </li>
-        </ul>
-
-        <div class="works-pager"></div>
-
-        <p class="contact">
-          More at <a href="https://dribbble.com/facumontanaro" target="_blank">Dribbble</a>
-          & <a href="https://behance.net/facumontanaro" target="_blank">Behance</a>
-        </p>
+        <a id="work1" href="https://www.behance.net/gallery/84189691/Coffeeholic-app" target="_blank"
+          title="Coffeeholic app"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/73d92184189691.5d5efd78d6890.png);"></a>
+        <a id="work2" href="https://dribbble.com/shots/7037804-SubteBA-redesign-concept-Light-mode" target="_blank"
+          title="SubteBA redesign concept - Light mode"
+          style="background-image: url(https://cdn.dribbble.com/users/225194/screenshots/7037804/media/74391d6ffdd73c76b7bc196d5501be5b.png);"></a>
+        <a id="work3" href="https://www.behance.net/gallery/79264475/Registro-Nacional-de-las-Personas" target="_blank"
+          title="Registro Nacional de las Personas"
+          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/fccb5d79264475.5cbe301aadabd.png);"></a>
       </section>
 
       <section id="about" v-bind:class="{ active: aboutScreen, hidden: aboutScreenLate }">
@@ -158,8 +140,8 @@
         <p class="title">Photography, coffee,<br>design & minimalism.</p>
         <p>
           I studied Multimedia Design but I’m mostly a self-tought photographer and designer. I focus on<br>
-          communication oriented in a minimalistic way driven by simplicity. I’m a coffee lover, a tv-shows fan<br>
-          and a gamer since I can remember.
+          communication oriented in a minimalistic way driven by simplicity. I’m a coffee lover, a tv-shows<br>
+          fan and a gamer since I can remember.
         </p>
       </section>
 
@@ -186,7 +168,7 @@
     <!-- Page scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery.cycle2.min.js"></script>
+    <!-- <script src="./js/jquery.cycle2.min.js"></script> -->
     <script src="./js/scripts.js"></script>
   </body>
 
