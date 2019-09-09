@@ -2,8 +2,9 @@
 
 ![Facu Montanaro](https://facumontanaro.com/images/facebook-share.png)
 
-> Photography, coffee,  
-> design & minimalism.
+### Photographer and visual designer  
+
+> Coffee lover and gamer too.
 
 ## Some dev steps
 
