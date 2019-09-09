@@ -15,8 +15,10 @@
 
 ## Used dependencies
 
-* [Vue.js](https://vuejs.org)
-* [Cycle 2](http://www.jquery.malsup.com/cycle2/)
+* [Sass](https://sass-lang.com)
+* [Gulp](https://gulpjs.com)
+* [Bootstrap](https://getbootstrap.com)
 * [Bourbon](https://www.bourbon.io)
 * [Breakpoint](http://breakpoint-sass.com)
 * [Animate.css](https://daneden.github.io/animate.css/)
+* [jQuery](https://jquery.com)
