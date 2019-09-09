@@ -1,68 +1,73 @@
-window.onload = function(){
-  console.log('scripts loaded');
-};
+$(document).ready(function() {
+  $.getJSON('images/projects.json', function(data) {
+    $('#work .container .row').html('');
+    $.each(data, function(i, item) {
+      var project = '<div class="col-md-6"><a href="' + item.link + '" target="_blank"class="icon-' + item.type + '" style="background-image: url(\'' + item.image + '\');"></a></div>'
+      $('#work .container .row').append(project);
+    });
+  });
+});
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    homeScreen: true,
-    workScreen: false,
-    aboutScreen: false,
-    contactScreen: false,
-    homeScreenLate: false,
-    workScreenLate: true,
-    aboutScreenLate: true,
-    contactScreenLate: true
-  },
-  methods: {
-    show: function(section) {
-      this.resetSections();
-      switch(section) {
-        case 'home':
-          setTimeout(function() { this.lateHome(); }.bind(this), 500);
-          break;
-        case 'work':
-          setTimeout(function() { this.lateWork(); }.bind(this), 500);
-          break;
-        case 'about':
-          setTimeout(function() { this.lateAbout(); }.bind(this), 500);
-          break;
-        case 'contact':
-          setTimeout(function() { this.lateContact(); }.bind(this), 500);
-          break;
-      }
-    },
-    resetSections: function() {
-      this.homeScreen = false;
-      this.workScreen = false;
-      this.aboutScreen = false;
-      this.contactScreen = false;
-    },
-    lateHome: function() {
-      this.resetLates();
-      this.homeScreenLate = false;
-      setTimeout(function() { this.homeScreen = true; }.bind(this), 200);
-    },
-    lateWork: function() {
-      this.resetLates();
-      this.workScreenLate = false;
-      setTimeout(function() { this.workScreen = true; }.bind(this), 200);
-    },
-    lateAbout: function() {
-      this.resetLates();
-      this.aboutScreenLate = false;
-      setTimeout(function() { this.aboutScreen = true; }.bind(this), 200);
-    },
-    lateContact: function() {
-      this.resetLates();
-      this.contactScreenLate = false;
-      setTimeout(function() { this.contactScreen = true; }.bind(this), 200);
-    },
-    resetLates: function() {
-      this.homeScreenLate = true;
-      this.workScreenLate = true;
-      this.aboutScreenLate = true;
-      this.contactScreenLate = true;
-    }
+$(".menu-home").click(function(e) {
+  e.preventDefault();
+  
+  $([document.documentElement, document.body]).animate({
+      scrollTop: 0
+  }, 700);
+});
+
+$(".menu-work").click(function(e) {
+  e.preventDefault();
+  
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#work").offset().top - 100
+  }, 700);
+});
+
+$(".menu-about").click(function(e) {
+  e.preventDefault();
+  
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#about").offset().top + 50
+  }, 700);
+});
+
+$(".menu-contact").click(function(e) {
+  e.preventDefault();
+  
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $("#contact").offset().top + 250
+  }, 700);
+});
+
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+
+  if (scroll >= 600) {
+      $("#totop").addClass("display");
+  } else {
+      $("#totop").removeClass("display");
+  }
+
+  var workPosition = $("#work").offset().top - 100;
+  var aboutPosition = $("#about").offset().top;
+  var contactPosition = $("#contact").offset().top + 50;
+
+  if (scroll >= contactPosition) {
+    $('.menu-work').removeClass('active');
+    $('.menu-about').removeClass('active');
+    $('.menu-contact').addClass('active');
+  } else if (scroll >= aboutPosition) {
+    $('.menu-work').removeClass('active');
+    $('.menu-about').addClass('active');
+    $('.menu-contact').removeClass('active');
+  } else if (scroll >= workPosition) {
+    $('.menu-work').addClass('active');
+    $('.menu-about').removeClass('active');
+    $('.menu-contact').removeClass('active');
+  } else {
+    $('.menu-work').removeClass('active');
+    $('.menu-about').removeClass('active');
+    $('.menu-contact').removeClass('active');
   }
 });

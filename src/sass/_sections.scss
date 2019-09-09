@@ -1,355 +1,162 @@
 section {
-  transition: .5s all;
-  opacity: 0;
-
   &#home {
-    width: 1000px;
-    height: 400px;
-    margin-left: 202px;
-    margin-top: 341px;
-    border: 0px solid black;
+    padding-top: 340px;
+    padding-bottom: 205px;
 
-    @include breakpoint(max-width $iPad-landscape) {
-      width: 80%;
-      margin-left: 104px;
-    }
     @include breakpoint(max-width $iPhone-landscape) {
-      width: 70%;
-      margin-top: 200px;
-      margin-left: 50px;
-      height: 550px;
+      padding-top: 260px;
+    }
+
+    h2 {
+      font-size: 35px;
+      font-weight: $font-weight-bold;
+      line-height: 48px;
+      color: $mineShaft;
+      margin: 0 0 17px 0;
+
+      @include breakpoint(max-width $iPhone-landscape) {
+        font-size: 32px;
+        line-height: 44px;
+      }
     }
 
     p {
-      &.contact {
-        &::before {
-          content: '';
-          position: absolute;
-          width: 44px;
-          height: 3px;
-          background: $yellow;
-          top: -20px;
-        }
+      font-size: 20px;
+      color: $midGray;
+      line-height: 27px;
+      margin: 0;
+
+      &.name {
+        font-size: 18px;
+        color: $silverSand;
+        line-height: 25px;
+        margin: 0 0 3px 0;
       }
     }
-  
   }
 
   &#work {
-    width: 1020px;
-    height: 540px;
-    margin-left: 202px;
-    margin-top: 140px;
-    border: 0px solid black;
-    position: relative;
-
-    @include breakpoint(max-width $iPad-landscape) {
-      width: 860px;
-      margin-left: 104px;
-    }
-    @include breakpoint(max-width $iPhone-landscape) {
-      width: 280px;
-      margin-top: 180px;
-      margin-left: 50px;
-      height: 890px;
-    }
-
-    p {
-      &.title {
-        padding-left: 28px;
-        position: relative;
-        &::after {
-          position: absolute;
-          bottom: -48px;
-          left: 96px;
-          content: attr(data-text);
-          color: $yellow;
-          font-size: 20px;
-          
-          @include breakpoint(max-width $iPhone-landscape) {
-            left: 68px;
-          }
-        }
-        &::before {
-          position: absolute;
-          bottom: -32px;
-          left: 28px;
-          content: '';
-          background: $yellow;
-          width: 50px;
-          height: 3px;
-          
-          @include breakpoint(max-width $iPhone-landscape) {
-            left: 0;
-          }
-        }
-        
-        @include breakpoint(max-width $iPhone-landscape) {
-          padding-top: 0;
-          padding-left: 0;
-        }
-      }
-      &.contact {
-        font-weight: 600;
-        font-size: 15px !important;
-        text-align: center;
-        color: $black;
-        padding-top: 20px;
-        a {
-          color: $black;
-        }
-      }
-    }
-
-    // ul {
-    //   li {
-    //     display: inline-block;
-    //     img {
-    //       width: 480px;
-    //       height: 360px;
-    //       margin: 0 15px;
-    //       @include breakpoint(max-width $iPad-landscape) {
-    //         width: 400px;
-    //         height: auto;
-    //       }
-    //       @include breakpoint(max-width $iPhone-landscape) {
-    //         width: 250px;
-    //         height: auto;
-    //         margin-bottom: 10px;
-    //       }
-    //     }
-    //   }
-    // }
-
-    // .works-pager {
-    //   margin: 0 auto;
-    //   text-align: center;
-    //   padding-top: 0px;
-    //   span {
-    //     display: inline-block;
-    //     width: 25px;
-    //     height: 20px;
-    //     margin: 0 6px;
-    //     font-size: 1px;
-    //     color: $white;
-    //     border-bottom: 1px solid $gray;
-    //     &.cycle-pager-active {
-    //       border-bottom: 1px solid $black;
-    //     }
-    //   }
-    // }
-
     a {
+      position: relative;
       display: block;
-      position: absolute;
-      overflow: hidden;
-      background: #cccccc;
+      width: 100%;
+      // height: 606px;
+      padding-top: 100%;
+      background-color: #BCBDBD;
+      margin-bottom: 30px;
+
       background-repeat: no-repeat;
-      background-position: center center;
       background-size: cover;
+      background-position: center center;
 
-      &#work1 {
-        top: 103px;
-        right: 393px;
-        width: 187px;
-        height: 243px;
-      }
-      &#work2 {
-        top: 0px;
-        right: 49px;
-        width: 219px;
-        height: 219px;
-      }
-      &#work3 {
-        top: 237px;
-        right: 0px;
-        width: 366px;
-        height: 219px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        // height: 100%;
+        padding-top: 100%;
+        background-color: rgba(27, 27, 27, 0.8);
+        opacity: 0;
+        transition: all .5s;
+        top: 0;
       }
 
-      @include breakpoint(max-width $iPhone-landscape) {
-        position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        color: $white;
+        font-size: 29px;
+        bottom: 30px;
+        right: 30px;
+        opacity: 0;
+        transition: all .5s;
+      }
 
-        &#work1, &#work2, &#work3 {
-          top: 100px;
-          left: 0;
-          width: 220px;
-          height: 170px;
-          margin-bottom: 30px;
+      &:hover {
+        &::before, &::after {
+          opacity: 1;
+        }
+      }
+
+      &.icon-instagram {
+        &::after {
+          font-family: FontAwesome;
+          content: '\f16d';
+        }
+      }
+
+      &.icon-dribbble {
+        &::after {
+          font-family: FontAwesome;
+          content: '\f17d';
+        }
+      }
+
+      &.icon-behance {
+        &::after {
+          font-family: FontAwesome;
+          content: '\f1b4';
         }
       }
     }
   }
 
   &#about {
-    width: 1260px;
-    height: 500px;
-    margin-left: 104px;
-    margin-top: 246px;
-    border: 0px solid #000000;
-    position: relative;
-    padding-top: 20px;
-
-    @include breakpoint(max-width $iPad-landscape) {
-      width: 80%;
-    }
-
-    @include breakpoint(max-width $iPhone-landscape) {
-      margin-left: 50px;
-      margin-top: 200px;
-      height: 680px;
-    }
-
-    #facumontanaro {
-      background: url('../images/facumontanaro.jpg') center center no-repeat;
-      background-size: cover;
-      width: 210px;
-      height: 310px;
-      position: absolute;
-      top: 0;
-      left: 100px;
-      border: 0;
-
-      @include breakpoint(max-width $iPad-landscape) {
-        width: 210px;
-        height: 310px;
-      }
-
-      @include breakpoint(max-width $iPhone-landscape) {
-        width: 210px;
-        height: 280px;
-        left: 0px;
-      }
+    padding-top: 250px;
+    
+    img {
+      width: 100%;
     }
 
     p {
-      padding-left: 359px;
-      font-size: 18px;
-      line-height: 40px;
+      color: $midGray;
+      font-size: 22px;
+      line-height: 200%;
+      padding-top: 80px;
 
       @include breakpoint(max-width $iPad-landscape) {
-        padding-left: 200px;
-        font-size: 13px;
-        line-height: 25px;
+        padding-top: 5px;
+        font-size: 20px;
       }
+      
       @include breakpoint(max-width $iPhone-landscape) {
-        padding-left: 0px;
-      }
-
-      &.contact {
-        padding-top: 64px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 30px;
+        padding-top: 30px;
       }
     }
   }
 
   &#contact {
-    width: 920px;
-    height: 200px;
-    margin-left: 258px;
-    margin-top: 313px;
-    border: 0px solid black;
+    padding-top: 427px;
 
-    @include breakpoint(max-width $iPad-landscape) {
-      margin-left: 104px;
-      margin-top: 250px;
-    }
+    h3 {
+      font-size: 40px;
+      font-weight: $font-weight-bold;
+      line-height: 54px;
+      padding-bottom: 40px;
 
-    @include breakpoint(max-width $iPhone-landscape) {
-      margin-left: 50px;
-      height: 320px;
-      width: 75%;
+      @include breakpoint(max-width $iPhone-landscape) {
+        font-size: 30px;
+        line-height: 42px;
+      }
     }
 
     p {
-      line-height: 32px;
-      margin-top: 14px;
-      font-weight: 600;
+      font-weight: $font-weight-bold;
+      font-size: 22px;
+      line-height: 34px;
 
-      @include breakpoint(max-width $iPhone-landscape) {
-        padding-left: 0px;
-        margin-top: 0px;
-        line-height: 25px;
-      }
+      a {
+        font-weight: $font-weight-semibold;
+        color: $silverSand;
+        padding-bottom: 7px;
+        border-bottom: 2px solid $silverSand;
 
-      &.title {
-        padding-top: 0;
-        padding-left: 0;
-        margin-top: 0;
-        line-height: 40px;
-      }
-
-      a:hover {
-        color: $black;
-      }
-    }
-
-    a {
-      font-weight: 400;
-      color: $gray;
-      border-bottom: 1px solid $gray;
-      padding-bottom: 4px;
-    }
-  }
-
-  &.active {
-    display: block;
-    opacity: 1;
-  }
-
-  &.hidden {
-    display: none;
-  }
-}
-
-p {
-  &.highlighted {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 500;
-    padding-bottom: 86px;
-
-    @include breakpoint(max-width $iPhone-landscape) {
-      font-size: 20px;
-      line-height: 30px;
-      padding-bottom: 40px;
-    }
-  }
-
-  &.title {
-    font-size: 30px !important;
-    line-height: 40px;
-    font-weight: 600;
-    padding-top: 15px;
-    padding-bottom: 40px;
-
-    @include breakpoint(max-width $iPhone-landscape) {
-      padding-top: 300px;
-      font-size: 20px !important;
-      line-height: 30px !important;
-      padding-bottom: 20px;
-    }
-  }
-
-  &.contact {
-    color: $gray;
-    font-size: 20px !important;
-    line-height: 24px;
-    position: relative;
-
-    @include breakpoint(max-width $iPad-landscape) {
-      font-size: 15px !important;
-    }
-
-    b {
-      font-weight: 600;
-    }
-
-    a {
-      color: $gray;
-
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          color: $midGray;
+          border-bottom: 2px solid $midGray;
+        }
       }
     }
   }

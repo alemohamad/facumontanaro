@@ -3,9 +3,12 @@
 
 // external
 @import 'bourbon';
+@import '../bootstrap/scss/bootstrap.scss';
 @import 'breakpoint';
 $use-fade: true;
 @import 'animate';
+
+@import 'bs';
 
 @import 'general';
 

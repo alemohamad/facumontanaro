@@ -1,43 +1,46 @@
 footer {
+  font-family: $sourceCodePro;
+  font-weight: $font-weight-medium;
+  font-size: 14px;
+  line-height: 116px;
+  padding-top: 180px;
+
   @include breakpoint(max-width $iPhone-landscape) {
-    position: relative;
-    text-align: center;
+    line-height: 30px;
+    padding-bottom: 60px;
   }
 
   #copy {
-    position: absolute;
-    bottom: 48px;
-    left: 104px;
-    font-size: 12px;
-    line-height: 15px;
-    color: $gray;
-    
+    color: $silverSand;
+    display: inline;
+
     @include breakpoint(max-width $iPhone-landscape) {
-      bottom: 15px;
-      left: 0;
-      width: 100%;
-      font-size: 11px;
+      display: block;
     }
   }
 
   ul {
-    position: absolute;
-    bottom: 48px;
-    right: 104px;
+    float: right;
+
     @include breakpoint(max-width $iPhone-landscape) {
-      bottom: 40px;
-      left: 0;
-      right: 0;
-      width: 100%;
+      float: left;
     }
 
     li {
-      font-weight: 600;
       display: inline-block;
-      padding: 0 30px;
-      @include breakpoint(max-width $iPhone-landscape) {
-        padding: 0 15px;
-        font-size: 14px;
+      text-align: left;
+
+      a {
+        display: block;
+        width: 84px;
+        line-height: 84px;
+        margin-left: 24px;
+        text-transform: uppercase;
+
+        @include breakpoint(max-width $iPhone-landscape) {
+          margin-left: 0;
+          line-height: 30px;
+        }
       }
     }
   }

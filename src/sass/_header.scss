@@ -1,40 +1,60 @@
 header {
+  position: fixed;
+  width: 100%;
+  height: 84px;
+  background: $white;
+  z-index: 9999;
+
+  @include breakpoint(max-width $iPhone-landscape) {
+    height: 120px;
+  }
+
   h1 {
-    position: absolute;
-    top: 93px;
-    left: 104px;
     text-indent: -9999px;
     display: inline-block;
     width: 50px;
     height: 40px;
+    margin: 22px 0;
     background: url('../images/logo.svg') no-repeat center center;
     cursor: pointer;
     animation-duration: 1.5s !important;
     animation-delay: .5s !important;
+
     @include breakpoint(max-width $iPhone-landscape) {
-      top: 50px;
-      left: 50px;
+      display: block;
+      margin: 22px auto;
     }
   }
 
   ul {
-    position: absolute;
-    top: 100px;
-    right: 104px;
+    float: right;
+
     @include breakpoint(max-width $iPhone-landscape) {
-      top: 200px;
-      left: 104px;
-      right: 0;
+      float: none;
+      display: block;
+      width: 100%;
     }
-    @include breakpoint(max-width $iPhone-landscape) {
-      top: 130px;
-      left: 50px;
-    }
+
     li {
       display: inline-block;
-      padding: 0 25px;
+      text-align: left;
+      
       @include breakpoint(max-width $iPhone-landscape) {
-        padding: 0 30px 0 0;
+        text-align: center;
+        width: 33%;
+      }
+
+      a {
+        display: block;
+        width: 84px;
+        line-height: 84px;
+        margin-left: 24px;
+
+        @include breakpoint(max-width $iPhone-landscape) {
+          width: 100%;
+          margin: 0;
+          line-height: 24px;
+        }
       }
     }
   }

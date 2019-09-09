@@ -25,15 +25,15 @@
     <meta property="og:url"          content="https://facumontanaro.com">
     <meta property="og:type"         content="website">
     <meta property="og:title"        content="Facu Montanaro">
-    <meta property="og:description"  content="I’m Facu Montanaro, photographer and designer working on branding and visual communication with a minimalist approach.">
+    <meta property="og:description"  content="Photographer and visual designer">
     <meta property="og:image"        content="https://facumontanaro.com/images/facebook-share.png">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="627">
 
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:creator"     content="@facumontanaro7">
+    <meta name="twitter:creator"     content="@facumontanaro_">
     <meta name="twitter:title"       content="Facu Montanaro">
-    <meta name="twitter:description" content="I’m Facu Montanaro, photographer and designer working on branding and visual communication with a minimalist approach.">
+    <meta name="twitter:description" content="Photographer and visual designer">
     <meta name="twitter:image"       content="https://facumontanaro.com/images/twitter-card.png">
 
     <!-- iOS PWA -->
@@ -94,81 +94,102 @@
 
     <!-- macOS Safari Touch Bar -->
     <link rel="mask-icon" href="./images/pinned-tab.svg" color="#000000">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-920268-21"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-920268-21');
+    </script>
+
+    <script src="https://kit.fontawesome.com/536b91376d.js"></script>
   </head>
 
   <body>
 
-    <div id="app">
-      <header>
-        <h1 @click="show('home')" class="animated fadeInDown">Facu Montanaro</h1>
+    <header>
+      <div class="container">
+        <h1 class="animated fadeInDown menu-home">Facu Montanaro</h1>
         <ul>
-          <li><a href="#work" v-bind:class="{ active: workScreen }" @click.prevent="show('work')">Work</a></li>
-          <li><a href="#about" v-bind:class="{ active: aboutScreen }" @click.prevent="show('about')">About</a></li>
-          <li><a href="#contact" v-bind:class="{ active: contactScreen }" @click.prevent="show('contact')">Contact</a></li>
+          <li><a href="#work" class="menu-work">Work</a></li>
+          <li><a href="#about" class="menu-about">About</a></li>
+          <li><a href="#contact" class="menu-contact">Contact</a></li>
         </ul>
-      </header>
+      </div>
+    </header>
 
-      <section id="home" v-bind:class="{ active: homeScreen, hidden: homeScreenLate }">
-          <p class="highlighted">
-            I’m a 29-year-old Argentinian photographer and designer living in
-            Buenos Aires. I consider myself a self-taught person who’s constantly
-            learning and always looking for new experiences.
-          </p>
+    <section id="home">
+      <div class="container">
+        <p class="name">Facu Montanaro</p>
+        <h2>Photographer and visual designer</h2>
+        <p>Coffee lover and gamer too.</p>
+      </div>
+    </section>
 
-          <p class="contact">
-            Let’s work together<br>
-            <a href="mailto:hello@facumontanaro.com">hello@facumontanaro.com</a>
-          </p>
-      </section>
+    <section id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" class="icon-instagram"></a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="icon-instagram"></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="work" v-bind:class="{ active: workScreen, hidden: workScreenLate }">
-        <p class="title" data-text="previews">Selected work,<br>more at Dribbble or Behance</p>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/facumontanaro.jpg" alt="Facu Montanaro">
+          </div>
 
-        <a id="work1" href="https://www.behance.net/gallery/84189691/Coffeeholic-app" target="_blank"
-          title="Coffeeholic app"
-          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/73d92184189691.5d5efd78d6890.png);"></a>
-        <a id="work2" href="https://dribbble.com/shots/7037804-SubteBA-redesign-concept-Light-mode" target="_blank"
-          title="SubteBA redesign concept - Light mode"
-          style="background-image: url(https://cdn.dribbble.com/users/225194/screenshots/7037804/media/74391d6ffdd73c76b7bc196d5501be5b.png);"></a>
-        <a id="work3" href="https://www.behance.net/gallery/79264475/Registro-Nacional-de-las-Personas" target="_blank"
-          title="Registro Nacional de las Personas"
-          style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/fccb5d79264475.5cbe301aadabd.png);"></a>
-      </section>
+          <div class="col-lg-8">
+            <p>
+              I’m an argentinian photographer and visual designer.<br>
+              I studied Multimedia Design but I consider myself a selft-taught person who’s constantly learning and always looking for new experiences.<br>
+              I focus on communication oriented in a minimalistic way driven by simplicity. I’m a coffee lover, a tv-shows fan and a gamer since day one.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="about" v-bind:class="{ active: aboutScreen, hidden: aboutScreenLate }">
-        <div id="facumontanaro"></div>
-        <p class="title">Photography, coffee,<br>design & minimalism.</p>
-        <p>
-          I studied Multimedia Design but I’m mostly a self-tought photographer and designer. I focus on<br>
-          communication oriented in a minimalistic way driven by simplicity. I’m a coffee lover, a tv-shows<br>
-          fan and a gamer since I can remember.
-        </p>
-      </section>
-
-      <section id="contact" v-bind:class="{ active: contactScreen, hidden: contactScreenLate }">
-        <p class="title">Let’s work together<br>on your next project.</p>
+    <section id="contact">
+      <div class="container">
+        <h3>Let’s work together<br>on your next project.</h3>
         <p>
           Email address:<br>
           <a href="mailto:hello@facumontanaro.com">hello@facumontanaro.com</a>
         </p>
-      </section>
+      </div>
+    </section>
 
-      <footer>
-        <div id="copy">
-          &copy; 2019 Facundo Montanaro. All Rights Reserved.
-        </div>
+    <footer>
+      <div class="container">
+        <p id="copy">
+          2019 &copy; Facu Montanaro. All rights reserved.
+        </p>
         <ul>
-          <li><a href="https://www.instagram.com/facumontanaro/" target="_blank">Instagram</a></li>
           <li><a href="https://dribbble.com/facumontanaro" target="_blank">Dribbble</a></li>
           <li><a href="https://behance.net/facumontanaro" target="_blank">Behance</a></li>
+          <li><a href="https://www.instagram.com/facumontanaro/" target="_blank">Instagram</a></li>
         </ul>
-      </footer>
+      </div>
+    </footer>
+
+    <div id="totop">
+      <a href="#" class="menu-home"></a>
     </div>
 
     <!-- Page scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <!-- <script src="./js/jquery.cycle2.min.js"></script> -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 

@@ -1,13 +1,21 @@
 // Colors
-$black: #000000;
+$mineShaft: #272727;
+$midGray: #69696A;
+$silverSand: #BCBDBD;
 $white: #FFFFFF;
-$gray: #A0A0A0;
-$yellow: #FFD300;
+$background: #E5E5E5;
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
 
-$montserrat: 'Montserrat', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+$sourceCodePro: 'Source Code Pro', monospace;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
 // Media Queries
 $iPad-portrait: 800px;
