@@ -1,0 +1,40 @@
+.navbar {
+  background: $white;
+  padding: 0 4rem;
+
+  .navbar-brand {
+    font-weight: $font-weight-medium;
+    line-height: 80px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0 1.2rem;
+
+    &.active {
+      color: $dark;
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-brand {
+    color: $dark;
+
+    &:hover {
+      color: $light;
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: inherit;
+
+      &:hover {
+        color: $light;
+      }
+
+      &.active {
+        color: $light;
+      }
+    }
+  }
+}

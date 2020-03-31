@@ -1,0 +1,62 @@
+footer {
+  padding-top: 350px;
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+
+  .nav-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    nav {
+      display: inline-block;
+      max-width: 250px;
+      vertical-align: top;
+
+      &::before {
+        color: $light;
+        display: block;
+      }
+
+      &.socials {
+        &::before {
+          content: "Socials —";
+        }
+      }
+
+      &.based {
+        &::before {
+          content: "Based in —";
+        }
+      }
+
+      &.work {
+        &::before {
+          content: "Work or coffee —";
+        }
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  small {
+    display: block;
+    padding: 70px 0 20px;
+    text-align: center;
+    font-family: $sourceCodePro;
+    font-size: 14px;
+    line-height: 35px;
+    color: $light;
+
+    a {
+      color: $light;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}

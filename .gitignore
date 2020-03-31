@@ -1,6 +1,7 @@
 /node_modules
 /dist
 /extra
+/2020/.sass-cache
 gulp-cache
 npm-debug.log
 package-lock.json
