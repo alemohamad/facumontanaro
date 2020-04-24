@@ -1,0 +1,51 @@
+.project {
+  margin: 108px 0;
+
+  div {
+    position: relative;
+
+    h3 {
+      font-size: 20px;
+      font-weight: $font-weight-semibold;
+      margin-bottom: 31px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: $font-weight-book;
+      color: $light;
+    }
+
+    a, .no-link {
+      font-family: $sourceCodePro;
+      font-size: 16px;
+      font-weight: $font-weight-medium;
+      position: absolute;
+      top: 164px;
+    }
+
+    a {
+      &::after {
+        content: '';
+        width: 42px;
+        height: 12px;
+        display: inline-block;
+        position: absolute;
+        background: url('../images/arrow.svg') no-repeat center center;
+        top: 7px;
+        transition: all .2s;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    img {
+      max-width: 690px;
+    }
+  }
+}

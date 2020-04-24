@@ -1,10 +1,4 @@
-/node_modules
-/dist
-/extra
-/2020/.sass-cache
-gulp-cache
-npm-debug.log
-package-lock.json
+/assets/node_modules
 .tmp
 .DS_Store
 Thumbs.db

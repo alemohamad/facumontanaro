@@ -1,0 +1,16 @@
+h1 {
+  height: 90vh;
+  padding-top: 20vh;
+  padding-left: 1px;
+  font-size: 4.4rem;
+  font-weight: $font-weight-semibold;
+  max-width: 1035px;
+
+  small {
+    display: block;
+    padding-top: 70px;
+    font-size: 16px;
+    font-weight: $font-weight-book;
+    color: $light;
+  }
+}

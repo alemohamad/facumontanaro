@@ -1,0 +1,51 @@
+body {
+  font-family: $metroSans;
+  font-size: 18px;
+  color: $dark;
+  -webkit-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: $font-weight-medium;
+  line-height: 70px;
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    content: "—";
+    padding-left: 10px;
+  }
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 35px;
+  font-weight: $font-weight-book;
+  margin: 0;
+  color: $light;
+
+  &::after {
+    content: "—";
+    padding-left: 10px;
+  }
+}
+
+section, footer {
+  max-width: 1095px;
+  margin: 0 auto;
+}
+
+a {
+  color: $dark;
+  transition: all .2s;
+
+  &:hover {
+    color: $light;
+    text-decoration: none;
+  }
+}

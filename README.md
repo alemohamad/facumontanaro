@@ -1,25 +1,14 @@
 # Facu Montanaro
 
-![Facu Montanaro](https://facumontanaro.com/images/facebook-share.png)
+![Facu Montanaro](https://facumontanaro.com/assets/images/facebook-share.png)
 
-### Photographer and visual designer  
+### Focused on creating meaningful experiences through design as a transformational tool.
 
-> Coffee lover and gamer too.
+> I’m a designer from Buenos Aires who loves coffee, photography and believes that less is more.
 
 ## Some dev steps
 
-1. Install **Nodejs**: [https://nodejs.org/en/](https://nodejs.org/en/)
-2. Install **Gulp**: [https://gulpjs.com](https://gulpjs.com)
-3. Install **npm dependencies** for the project: `$ npm install`
-4. Run **Gulp**: `$ gulp watch`
-5. Deploy the **dist** folder in your server.
-
-## Used dependencies
-
-* [Sass](https://sass-lang.com)
-* [Gulp](https://gulpjs.com)
-* [Bootstrap](https://getbootstrap.com)
-* [Bourbon](https://www.bourbon.io)
-* [Breakpoint](http://breakpoint-sass.com)
-* [Animate.css](https://daneden.github.io/animate.css/)
-* [jQuery](https://jquery.com)
+1. Install **NodeJS**: [https://nodejs.org/en/](https://nodejs.org/en/)
+3. Install **npm dependencies** for [Sass](https://sass-lang.com) assets: `$ npm install`
+4. Run: `$ npm run process-styles`
+5. Deploy files in your server.
